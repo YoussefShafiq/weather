@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>weather</title>
+    <link rel="icon" type="image" href="/images/icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><i class="fa-solid fa-smog" style="color: #0070e9;"></i> Weather</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Live cameras</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Photos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="backgoundImage position-absolute w-100">
+
+    </div>
+
+    <div class="container position-relative">
+        <div class="searchCont d-flex justify-content-center">
+            <div class="wrap-input-17">
+                <div class="search-box">
+                    <button class="btn-search" style="z-index: 2;">🔍</button>
+                    <input id="CountrySearch" type="text" class="input-search" placeholder="Type to Search...">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mb-4 position-relative">
+        <div class="row bg-dark rounded-3 overflow-hidden">
+            <div class="col-md-4 my-bg p-0">
+                <div class="todayHead d-flex justify-content-between align-items-center p-2 bg-tr-dark">
+                    <div id="todayName">wednesday</div>
+                    <div id="Date">12June</div>
+                </div>
+                <div class="content p-4 ">
+                    <div id="country" class="country"><i class="fa-solid fa-location-dot"></i> Cairo </div>
+                    <div class="d-flex align-items-center">
+                        <h1 id="todayC">32.2 ْ C</h1>
+                        <div id="conditionicon">
+                            <img src="" alt="">
+                        </div>
+                    </div>
+
+                    <p id="condition">Sunny</p>
+                    <span id="info"><i class="fa-solid fa-droplet"></i> 20%<i class="fa-solid fa-wind ps-5"></i> 18km/h
+                        <i class="fa-regular fa-compass ps-5"></i> east</span>
+                </div>
+            </div>
+            <div class="col-md-4 my-bg2 p-0 ">
+                <div class="todayHead text-center p-2 bg-tr-dark">
+                    <div id="day2Name">thursday</div>
+                </div>
+                <div class="content text-center p-4 ">
+                    <!-- condition icon -->
+                    <div id="day2conditionIcon" class="p-3">
+                        <img src="" alt="">
+                    </div>
+                    <!-- min max deg -->
+                    <h1 id="day2maxC" class="maxC ">32.2 ْ C</h1>
+                    <h5 id="day2minC" class="minC fw-light ">25.8 ْ C</h5>
+                    <!-- condition -->
+                    <p id="day2condition" class="py-3">Sunny</p>
+
+                </div>
+            </div>
+            <div class="col-md-4 my-bg p-0 ">
+                <div class="todayHead text-center p-2 bg-tr-dark">
+                    <div id="day3Name">friday</div>
+                </div>
+                <div class="content text-center p-4 ">
+                    <!-- condition icon -->
+                    <div id="day3conditionIcon" class="p-3">
+                        <img src="" alt="">
+                    </div>
+                    <!-- min max deg -->
+                    <h1 id="day3maxC" class="maxC ">32.2 ْ C</h1>
+                    <h5 id="day3minC" class="minC fw-light ">25.8 ْ C</h5>
+                    <!-- condition -->
+                    <p id="day3condition" class="py-3">Sunny</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer p-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="form">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <input id="email" type="text" class='form-control'
+                                placeholder="Enter your email to subscribe...">
+                            <button id="subscribeBtn" class="btn">subscribe</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="medialinks col-md-3 align-items-center d-flex">
+                    <div class="d-grid iconCont rounded-circle mx-1">
+                        <i class="fa-brands fa-facebook m-auto"></i>
+                    </div>
+                    <div class="d-grid iconCont rounded-circle mx-1">
+                        <i class="fa-brands fa-twitter m-auto"></i>
+                    </div>
+                    <div class="d-grid iconCont rounded-circle mx-1">
+                        <i class="fa-brands fa-google m-auto"></i>
+                    </div>
+                    <div class="d-grid iconCont rounded-circle mx-1">
+                        <i class="fa-brands fa-facebook m-auto"></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="text-light opacity-50 text-center mt-3">Copyright 2014 Company
+            name. Designed by Themezy. All rights reserved
+        </div>
+    </div>
+
+
+
+
+    <script src="js/main.js">
+    </script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

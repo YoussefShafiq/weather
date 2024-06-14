@@ -116,6 +116,61 @@ body {
 .my-bg {
     background-color: rgb(34, 44, 55);
     color: white;
+
+}
+
+.Sunnybg {
+    background: linear-gradient(rgba(0, 0, 0, 0.451), rgba(120, 78, 0, 0.681)), url('../images/sunny.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.cloudybg {
+    background: linear-gradient(rgba(0, 0, 0, 0.692), rgba(0, 0, 0, 0.462)), url('../images/cloudy.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.partlycloudybg {
+    background: linear-gradient(rgba(0, 0, 0, 0.631), rgba(0, 0, 0, 0.395)), url('../images/partlycloudy.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.Clearbg {
+    background: linear-gradient(rgba(0, 0, 0, 0.544), rgba(0, 0, 0, 0.406)), url('../images/clear.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.rainbg {
+    background: linear-gradient(rgba(0, 17, 74, 0.544), rgba(0, 24, 76, 0.319)), url('../images/rain.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.freezerainbg {
+    background: linear-gradient(rgba(0, 17, 74, 0.544), rgba(0, 24, 76, 0.319)), url('../images/freezerain.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.patchyrainbg {
+    background: linear-gradient(rgba(0, 20, 58, 0.544), rgba(0, 3, 43, 0.337)), url('../images/patchyrain.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.mistbg {
+    background: linear-gradient(rgba(0, 0, 0, 0.544), rgba(0, 0, 0, 0.406)), url('../images/mist.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.thunderbg {
+    background: linear-gradient(rgba(0, 0, 0, 0.544), rgba(0, 0, 0, 0.406)), url('../images/thunder.jpg');
+    background-position: center;
+    background-size: cover;
 }
 
 .my-bg2 {
@@ -151,6 +206,22 @@ body {
     transform: translateX(-100%);
 }
 
+
+.iconCont {
+    background-color: rgba(0, 0, 0, 0.133);
+    color: white;
+    width: 40px;
+    height: 40px;
+    transition: all .4s;
+}
+
+.iconCont:hover {
+    cursor: pointer;
+    background-color: #278fff;
+}
+
+
+
 @media screen and (max-width:676px) {
     #subscribeBtn {
         border: solid 9px rgb(13, 22, 33);
@@ -166,17 +237,18 @@ body {
     .medialinks {
         justify-content: center;
     }
-}
 
-.iconCont {
-    background-color: rgba(0, 0, 0, 0.133);
-    color: white;
-    width: 40px;
-    height: 40px;
-    transition: all .4s;
-}
+    .searchCont {
+        padding-block: 50px
+    }
 
-.iconCont:hover {
-    cursor: pointer;
-    background-color: #278fff;
+    .wrap-input-17 .input-search {
+        width: 200px;
+    }
+
+    #todayC {
+        padding-block: 20px;
+        font-size: 80px;
+        font-weight: 700;
+    }
 }

@@ -33,7 +33,7 @@ function displayToday(newcountry, newDeg, newCondition, newHumadity, newWind, ne
     document.getElementById('todayName').innerHTML = getDayName(`${date}`)
     document.getElementById('Date').innerHTML = formatDate(`${date}`)
     country.innerHTML = `<i class="fa-solid fa-location-dot"></i> ${newcountry} `
-    CurrentDeg.innerHTML = `${newDeg} ْC`
+    CurrentDeg.innerHTML = `${newDeg} ºC`
     CurrentConditionIcon.innerHTML = `<img src="${newCondition.icon}" style="width:150%" alt="">`
     currentCondition.innerHTML = `${newCondition.text}`
     info.innerHTML = `<i class="fa-solid fa-droplet"></i> ${newHumadity}%<i class="fa-solid fa-wind ps-5"></i> ${newWind}km/h <i
@@ -44,8 +44,8 @@ function displayDay2(maxDeg, minDeg, condition, date) {
     weatherBackground(`${condition.text}`, 'day2card')
     document.getElementById('day2Name').innerHTML = getDayName(`${date}`)
     document.getElementById('day2conditionIcon').innerHTML = `<img src="${condition.icon}" class="w-25" alt="">`
-    document.getElementById('day2maxC').innerHTML = `${maxDeg} ْC`
-    document.getElementById('day2minC').innerHTML = `${minDeg} ْC`
+    document.getElementById('day2maxC').innerHTML = `${maxDeg} ºC`
+    document.getElementById('day2minC').innerHTML = `${minDeg} ºC`
     document.getElementById('day2condition').innerHTML = `${condition.text}`
 }
 
@@ -53,8 +53,8 @@ function displayDay3(maxDeg, minDeg, condition, date) {
     weatherBackground(`${condition.text}`, 'day3card')
     document.getElementById('day3Name').innerHTML = getDayName(`${date}`)
     document.getElementById('day3conditionIcon').innerHTML = `<img src="${condition.icon}" class="w-25" alt="">`
-    document.getElementById('day3maxC').innerHTML = `${maxDeg} ْC`
-    document.getElementById('day3minC').innerHTML = `${minDeg} ْC`
+    document.getElementById('day3maxC').innerHTML = `${maxDeg} ºC`
+    document.getElementById('day3minC').innerHTML = `${minDeg} ºC`
     document.getElementById('day3condition').innerHTML = `${condition.text}`
 }
 

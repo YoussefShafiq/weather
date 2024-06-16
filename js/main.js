@@ -16,15 +16,18 @@ async function getcountry() {
     console.log(result.city);
     getWeather(result.city)
 }
+let forecast
 
 getcountry()
 async function getWeather(country) {
-    let data = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=1f039acad4d9499b854172033241206&q=${country}&days=3&aqi=no&alerts=no`)
+    let data = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=1f039acad4d9499b854172033241206&q=${country}&days=14&aqi=no&alerts=no`)
     let result = await data.json()
     displayToday(result.location.name, result.current.temp_c, result.current.condition, result.current.humidity, result.current.wind_kph, result.current.wind_dir, result.forecast.forecastday[0].date)
     displayDay2(result.forecast.forecastday[1].day.maxtemp_c, result.forecast.forecastday[1].day.mintemp_c, result.forecast.forecastday[1].day.condition, result.forecast.forecastday[1].date)
     displayDay3(result.forecast.forecastday[2].day.maxtemp_c, result.forecast.forecastday[2].day.mintemp_c, result.forecast.forecastday[2].day.condition, result.forecast.forecastday[2].date)
-
+    forecast = result.forecast
+    l4dayWeatherChart(result.forecast)
+    todaysWeatherChart(result.forecast)
 }
 
 
@@ -72,6 +75,12 @@ function formatDate(dateString) {
     const month = monthNames[date.getMonth()];
 
     return `${day}${month}`;
+}
+
+function ChartDate(dateString) {
+    const date = new Date(dateString);
+    const day = date.getDate();
+    return `${day}/${date.getMonth() + 1}`;
 }
 
 function weatherBackground(condition, cardid) {
@@ -132,6 +141,72 @@ function weatherBackground(condition, cardid) {
 
     }
 }
+
+function todaysWeatherChart(forecast) {
+    console.log(ChartDate(forecast.forecastday[0].date));
+    const xValues = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"]
+    const yValues = []
+
+
+    for (let i = 0; i < 24; i++) {
+        yValues.push(forecast.forecastday[0].hour[i].temp_c)
+    }
+
+    new Chart("24HourWeather", {
+        type: "line",
+        data: {
+            labels: xValues,
+            datasets: [{
+                fill: false,
+                lineTension: 0,
+                backgroundColor: "rgba(255,255,255,1.0)",
+                borderColor: "rgba(0,0,255,0.1)",
+                data: yValues
+            }]
+        },
+        options: {
+            legend: { display: false },
+            scales: {
+                yAxes: [{ ticks: { min: forecast.forecastday[0].day.mintemp_c - 2, max: forecast.forecastday[0].day.maxtemp_c + 2 } }],
+            }
+        }
+    });
+}
+
+function l4dayWeatherChart(forecast) {
+    console.log(ChartDate(forecast.forecastday[0].date));
+    const xValues = []
+    const yValues = []
+    for (let i = 0; i < 14; i++) {
+        xValues.push(ChartDate(forecast.forecastday[i].date))
+    }
+
+    for (let i = 0; i < 14; i++) {
+        yValues.push(forecast.forecastday[i].day.avgtemp_c)
+    }
+
+    new Chart("14DayWeatherChart", {
+        type: "line",
+        data: {
+            labels: xValues,
+            datasets: [{
+                fill: false,
+                lineTension: 0,
+                backgroundColor: "rgba(255,255,255,1.0)",
+                borderColor: "rgba(0,0,255,0.1)",
+                data: yValues
+            }]
+        },
+        options: {
+            legend: { display: false },
+            scales: {
+                yAxes: [{ ticks: { min: forecast.forecastday[1].day.mintemp_c - 5, max: forecast.forecastday[1].day.maxtemp_c + 5 } }],
+            }
+        }
+    });
+}
+
+
 
 
 

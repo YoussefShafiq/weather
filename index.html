@@ -123,6 +123,27 @@
         </div>
     </div>
 
+    <div class="charts">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-md-6 p-3">
+                    <!-- todays weather chart -->
+                    <h3 class="text-light text-center">24 hours weather</h3>
+                    <canvas id="24HourWeather" class="w-100 m-auto"></canvas>
+                </div>
+                <div class="col-md-6 p-3">
+                    <!-- 14 day graph -->
+                    <h3 class="text-light text-center">14 day AVG forecasting</h3>
+                    <canvas id="14DayWeatherChart" class="w-100 m-auto"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
     <div class="footer p-5">
         <div class="container">
             <div class="row">
@@ -159,7 +180,7 @@
 
 
 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <script src="js/main.js">
     </script>
     <script src="js/bootstrap.bundle.min.js"></script>

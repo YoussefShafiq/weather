@@ -252,3 +252,7 @@ body {
         font-weight: 700;
     }
 }
+
+.charts {
+    background-color: rgba(34, 44, 55, 0.206);
+}

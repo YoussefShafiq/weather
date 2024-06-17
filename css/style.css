@@ -28,6 +28,7 @@ body {
 
 .backgoundImage {
     height: 50vh;
+    max-height: 400px;
     background: linear-gradient(rgba(0, 0, 0, 0.579), rgba(0, 0, 0, 0.493)), url('../images/wp13578047-sunset-new-york-wallpapers.jpg');
     background-size: cover;
     background-position-y: 30%;

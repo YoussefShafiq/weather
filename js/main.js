@@ -160,7 +160,7 @@ function todaysWeatherChart(forecast) {
                 fill: false,
                 lineTension: 0,
                 backgroundColor: "rgba(255,255,255,1.0)",
-                borderColor: "rgba(0,0,255,0.1)",
+                borderColor: "rgba(255,255,255,.1)",
                 data: yValues
             }]
         },
@@ -193,14 +193,14 @@ function l4dayWeatherChart(forecast) {
                 fill: false,
                 lineTension: 0,
                 backgroundColor: "rgba(255,255,255,1.0)",
-                borderColor: "rgba(0,0,255,0.1)",
+                borderColor: "rgba(255,255,255,.1)",
                 data: yValues
             }]
         },
         options: {
             legend: { display: false },
             scales: {
-                yAxes: [{ ticks: { min: forecast.forecastday[1].day.mintemp_c - 5, max: forecast.forecastday[1].day.maxtemp_c + 5 } }],
+                yAxes: [{ ticks: { min: forecast.forecastday[1].day.mintemp_c, max: forecast.forecastday[1].day.maxtemp_c } }],
             }
         }
     });

@@ -1,0 +1,179 @@
+body {
+    background-color: rgb(13, 22, 33);
+    min-height: 100vh;
+}
+
+*::selection {
+    color: white;
+    background-color: orange;
+}
+
+.navbar-brand {
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.nav-link {
+    margin: 4px;
+    padding-block: 3px;
+    padding-inline: 25px !important;
+    border-radius: 20px;
+    border: solid 2px #4eafff00;
+    transition: all .5s;
+}
+
+.nav-link.active,
+.nav-link:hover {
+    border-color: #4eafff;
+    color: #278fff !important;
+}
+
+
+
+.backgoundImage {
+    height: 50vh;
+    max-height: 400px;
+    background: linear-gradient(rgba(0, 0, 0, 0.579), rgba(0, 0, 0, 0.493)), url('../images/wp13578047-sunset-new-york-wallpapers.jpg');
+    background-size: cover;
+    background-position-y: 30%;
+    background-repeat: no-repeat;
+}
+
+.title {
+    z-index: 2;
+
+    h1 {
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 90px;
+    }
+}
+
+.z-top {
+    z-index: 2;
+
+}
+
+.new {
+    background-color: rgba(0, 0, 0, 0.448);
+    height: 100%;
+    backdrop-filter: blur(3px);
+    border: rgba(255, 255, 255, 0.547) solid 1px;
+}
+
+
+
+.morelink {
+    text-decoration: none;
+    font-weight: 500;
+    color: rgb(255, 191, 0);
+    transition: all .3s;
+}
+
+.morelink:hover {
+    color: rgb(172, 129, 0);
+}
+
+.metadata {
+    font-size: 15px;
+    color: rgb(207, 207, 207);
+
+}
+
+.footer {
+    margin-top: 100px;
+    position: relative;
+    z-index: 2;
+    background-color: rgb(34, 44, 55);
+}
+
+#email {
+    border-radius: 50px;
+    padding: 15px;
+    border: rgb(13, 22, 33);
+    background: rgb(13, 22, 33);
+    color: white;
+}
+
+#subscribeBtn {
+    border: solid 7px rgb(13, 22, 33);
+    border-radius: 50px;
+    background: rgb(49, 83, 125);
+    color: white;
+    transform: translateX(-100%);
+}
+
+
+.iconCont {
+    background-color: rgba(0, 0, 0, 0.133);
+    color: white;
+    width: 40px;
+    height: 40px;
+    transition: all .4s;
+}
+
+.iconCont:hover {
+    cursor: pointer;
+    background-color: #278fff;
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    border: 3px solid;
+    border-color: #FFF #FFF transparent transparent;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+.loader::after,
+.loader::before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border: 3px solid;
+    border-color: transparent transparent #FF3D00 #FF3D00;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    animation: rotationBack 0.5s linear infinite;
+    transform-origin: center center;
+}
+
+.loader::before {
+    width: 32px;
+    height: 32px;
+    border-color: #FFF #FFF transparent transparent;
+    animation: rotation 1.5s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotationBack {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}

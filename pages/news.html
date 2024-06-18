@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>weather</title>
+    <link rel="icon" type="image" href="../images/icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/news.css">
+    <link rel="stylesheet" href="../css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html"><i class="fa-solid fa-smog" style="color: #0070e9;"></i>
+                Weather</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Live cameras</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Photos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="backgoundImage position-absolute w-100">
+
+    </div>
+
+
+
+
+
+    <div class="position-relative title text-light text-center py-5">
+        <h1>News</h1>
+    </div>
+
+    <div class="container z-top text-light">
+        <div id="newsRow" class="row z-top">
+            <div class="text-center">
+                <span class="loader"></span>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="footer p-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="form">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <input id="email" type="text" class='form-control'
+                                placeholder="Enter your email to subscribe...">
+                            <button id="subscribeBtn" class="btn">subscribe</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="medialinks col-md-3 align-items-center d-flex">
+                    <div class="d-grid iconCont rounded-circle mx-1">
+                        <i class="fa-brands fa-facebook m-auto"></i>
+                    </div>
+                    <div class="d-grid iconCont rounded-circle mx-1">
+                        <i class="fa-brands fa-twitter m-auto"></i>
+                    </div>
+                    <div class="d-grid iconCont rounded-circle mx-1">
+                        <i class="fa-brands fa-google m-auto"></i>
+                    </div>
+                    <div class="d-grid iconCont rounded-circle mx-1">
+                        <i class="fa-brands fa-instagram m-auto"></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="text-light opacity-50 text-center mt-3">Copyright 2014 Company
+            name. Designed by Themezy. All rights reserved <br>
+            developed by @<a href="https://www.linkedin.com/in/youssefshafek" class="text-decoration-none fw-bold"
+                target="_blank">Shafek</a>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="../js/news.js">
+    </script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

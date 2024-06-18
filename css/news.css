@@ -119,6 +119,24 @@ body {
     background-color: #278fff;
 }
 
+@media screen and (max-width:676px) {
+    #subscribeBtn {
+        border: solid 9px rgb(13, 22, 33);
+        position: absolute;
+        right: 0px;
+        transform: translateX(-50%);
+    }
+
+    .form {
+        margin-bottom: 10px;
+    }
+
+    .medialinks {
+        justify-content: center;
+    }
+
+}
+
 .loader {
     width: 48px;
     height: 48px;

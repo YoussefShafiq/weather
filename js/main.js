@@ -11,7 +11,7 @@ searchInput.addEventListener('input', function () {
 })
 
 async function getcountry() {
-    let data = await fetch(`https://ipinfo.io/json`)
+    let data = await fetch(`https://ipinfo.io/197.37.114.14?token=8795d73775ab27`)
     let result = await data.json()
     console.log(result.city);
     getWeather(result.city)

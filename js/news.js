@@ -8,7 +8,7 @@ async function getcountry() {
 getcountry()
 
 async function getNews(country) {
-    let news = await fetch(`https://newsapi.org/v2/top-headlines?country=${country}&category=business&apiKey=517b1c0045ea4c78899df5afe8f01450`)
+    let news = await fetch(`https://newsapi.org/v2/top-headlines?country=${country}&category=general&apiKey=517b1c0045ea4c78899df5afe8f01450`)
     let result = await news.json()
     addNews(result.articles)
     console.log(result.articles);
